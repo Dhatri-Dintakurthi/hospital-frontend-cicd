@@ -34,7 +34,8 @@ jobs:
       - name: Build frontend
         run: npm run build
 
-      - name: Upload build output
+      # Vite outputs to dist/
+      - name: Upload dist folder
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -50,4 +51,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
