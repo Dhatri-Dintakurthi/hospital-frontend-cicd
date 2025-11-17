@@ -1,9 +1,8 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // 👇 your repo name here – must match exactly
-  base: '/hospital-frontend-cicd/',
+  base: '/hospital-frontend-cicd/', // repo name exactly
   plugins: [react()],
 })
